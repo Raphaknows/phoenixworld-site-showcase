@@ -1,0 +1,15 @@
+---
+import { PHOENIX } from '../scripts/stage/phoenix-path';
+interface Props { home?: boolean }
+const { home = false } = Astro.props;
+const p = home ? '' : '/';
+---
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><linearGradient id="phx-grad" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#D9381A"/><stop offset=".5" stop-color="#FF6A1A"/><stop offset="1" stop-color="#FFBE5C"/></linearGradient><symbol id="phx-mark" viewBox="40 0 920 810"><path fill="url(#phx-grad)" d={PHOENIX}/></symbol></defs></svg>
+<header class="bar" id="top">
+  <div class="wrap">
+    <a class="logo" href={`${p}#top`} aria-label="Phoenix World home">
+      <svg class="mark" width="40" height="35" viewBox="40 0 920 810" aria-hidden="true" focusable="false"><use href="#phx-mark"/></svg>
+      <b>PHOENIX WORLD</b>
+    </a>
+  </div>
+</header>

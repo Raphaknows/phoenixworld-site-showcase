@@ -1,0 +1,29 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+<Base
+  title="Page not found | Phoenix World"
+  description="This page doesn't exist. Head back to the Phoenix World home page."
+  path="/404/"
+  noindex
+>
+  <Header />
+  <main>
+    <section class="chapter page" aria-labelledby="h-404">
+      <div class="wrap">
+        <div class="lost">
+          <div class="hud"><span class="on">//</span> Error 404 <span class="hot">·</span> Signal lost</div>
+          <h1 id="h-404">Nothing here but <span class="fire">ashes.</span></h1>
+          <p class="lede">That page doesn't exist, or it has moved. The rest of the site is still burning bright.</p>
+          <div class="cta-row">
+            <a class="btn btn-fire" href="/">Back to the home page
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8 H13 M9 4 L13 8 L9 12" stroke="currentColor" stroke-width="2"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Base>

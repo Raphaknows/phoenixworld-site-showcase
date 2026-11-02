@@ -1,0 +1,41 @@
+---
+---
+  <section class="chapter audit" id="audit" aria-labelledby="h-audit">
+    <div class="wrap">
+      <div class="ch-head">
+        <div class="ch-tag"><span class="num">CH.VI</span><span class="rule"></span><span class="name">Rise</span></div>
+        <h2 id="h-audit" data-scramble>Show us the task your team hates most.</h2>
+        <p>Twenty minutes, free. You leave with a written outline of what we'd automate and what it would take, whether or not you work with us.</p>
+        <ul class="audit-list">
+          <li><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M6 0 L12 6 L6 12 L0 6 Z" fill="currentColor"/></svg>A walkthrough of one real workflow, on screen</li>
+          <li><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M6 0 L12 6 L6 12 L0 6 Z" fill="currentColor"/></svg>A written outline within 3 business days</li>
+          <li><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M6 0 L12 6 L6 12 L0 6 Z" fill="currentColor"/></svg>Mutual NDA signed before we look at anything</li>
+          <li><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M6 0 L12 6 L6 12 L0 6 Z" fill="currentColor"/></svg>No obligation and no sales sequence</li>
+        </ul>
+      </div>
+      <form class="req brackets" id="auditForm" novalidate>
+        <div class="hud"><span class="on">●</span> Audit request</div>
+        <div class="fgrid">
+          <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="f-company">Company</label><input id="f-company" name="company" type="text" autocomplete="organization" required></div>
+        </div>
+        <div class="field"><label for="f-email">Work email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="f-workflow">Which workflow hurts most?</label>
+          <select id="f-workflow" name="workflow">
+            <option>Document intake &amp; data entry</option>
+            <option>Customs prep</option>
+            <option>Quotes from email</option>
+            <option>Shipment status &amp; customer updates</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="field"><label for="f-message">Anything you'd like me to know? (optional)</label><textarea id="f-message" name="message" rows="4" maxlength="1000"></textarea></div>
+        <div class="hp" aria-hidden="true"><label for="f-hp">Leave this field empty</label><input id="f-hp" name="_gotcha" type="text" tabindex="-1" autocomplete="off"></div>
+        <p class="estimate" id="formInterest" hidden></p>
+        <p class="estimate" id="formEstimate" hidden></p>
+        <button class="btn btn-fire" type="submit">Request my audit</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        <p class="note">We use these details only to reply about your audit. <a href="/privacy/">Privacy</a></p>
+      </form>
+    </div>
+  </section>

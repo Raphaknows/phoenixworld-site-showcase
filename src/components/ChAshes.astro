@@ -1,0 +1,61 @@
+---
+---
+  <section class="chapter" id="ashes" aria-labelledby="h-ashes">
+    <div class="wrap">
+      <div class="ch-head">
+        <div class="ch-tag"><span class="num">CH.I</span><span class="rule"></span><span class="name">Ashes</span></div>
+        <h2 id="h-ashes" data-scramble>Where your team's hours burn.</h2>
+        <p>Every forwarder we talk to has the same four fires. Skilled people spend the day copying data between documents, inboxes and systems.</p>
+      </div>
+      <div class="ashes">
+        <article class="ash">
+          <div class="k hud"><span>A · Intake</span><span class="hot">Manual</span></div>
+          <h3>Document intake</h3>
+          <p>Shipping documents arrive as PDFs and scans, then get keyed in by hand.</p>
+          <div class="doc"><span>B/L</span><span>Commercial invoice</span><span>Packing list</span></div>
+        </article>
+        <article class="ash">
+          <div class="k hud"><span>B · Compliance</span><span class="hot">Manual</span></div>
+          <h3>Customs prep</h3>
+          <p>Cross-checking documents, chasing missing data and assembling entry packets before anyone can file.</p>
+          <div class="doc"><span>HTS codes</span><span>Origin</span><span>Values</span></div>
+        </article>
+        <article class="ash">
+          <div class="k hud"><span>C · Sales</span><span class="hot">Slow</span></div>
+          <h3>Quotes from email</h3>
+          <p>Rate requests buried in inboxes, priced from spreadsheets, answered hours or days later.</p>
+          <div class="doc"><span>FCL</span><span>LCL</span><span>Air</span></div>
+        </article>
+        <article class="ash">
+          <div class="k hud"><span>D · Service</span><span class="hot">Repetitive</span></div>
+          <h3>"Where's my cargo?"</h3>
+          <p>Status updates copied from carrier portals into customer emails, one shipment at a time.</p>
+          <div class="doc"><span>ETA</span><span>Holds</span><span>Delivery</span></div>
+        </article>
+      </div>
+      <div class="callout">
+        <p>Hiring for data entry, documentation or dispatch, and hiring again when people leave? <b>That job description is the map of what we can automate.</b></p>
+        <a class="btn btn-ghost btn-sm" href="#audit">Show us yours</a>
+      </div>
+      <div class="calc" id="calc">
+        <div class="calc-in">
+          <div class="hud"><span class="on">●</span> Burn calculator · example numbers, change them to yours</div>
+          <div class="row2">
+            <div class="field"><label for="c-people">People on manual paperwork</label><input id="c-people" type="number" min="1" max="500" value="4" inputmode="numeric"></div>
+            <div class="field"><label for="c-rate">Loaded cost per hour (USD)</label><input id="c-rate" type="number" min="10" max="500" value="30" inputmode="numeric"></div>
+          </div>
+          <div class="field"><label for="c-hours">Hours each spends on it per week</label><div class="range"><input id="c-hours" type="range" min="2" max="40" value="20"><output id="o-hours" for="c-hours">20 h</output></div></div>
+          <div class="field"><label for="c-share">Share you think could be automated (your estimate)</label><div class="range"><input id="c-share" type="range" min="10" max="90" step="5" value="50"><output id="o-share" for="c-share">50%</output></div></div>
+        </div>
+        <div class="calc-out" aria-live="polite">
+          <span class="hud">Burned per year on manual work</span>
+          <div class="big" id="r-cost">$120,000</div>
+          <div class="heat" id="heatBar"><i></i></div>
+          <div class="mid"><span id="r-hours">4,000</span> hours</div>
+          <p>At your estimate, <b id="r-save">$60,000</b> and <b id="r-save-h">2,000 hours</b> a year go back to work that needs a person.</p>
+          <p class="note">50 working weeks a year. These are your inputs, not our claims. Watch the embers: the fire grows with the number.</p>
+          <a class="btn btn-fire btn-sm" href="#audit">Bring these numbers to the audit</a>
+        </div>
+      </div>
+    </div>
+  </section>

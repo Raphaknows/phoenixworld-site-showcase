@@ -1,0 +1,14 @@
+---
+interface Props { home?: boolean }
+const { home = false } = Astro.props;
+---
+<footer>
+  <div class="wrap">
+    <a class="logo" href={home ? '#top' : '/'} aria-label={home ? 'Phoenix World, back to top' : 'Phoenix World home'}>
+      <svg class="mark" width="30" height="26" viewBox="40 0 920 810" aria-hidden="true" focusable="false"><use href="#phx-mark"/></svg>
+      <b>PHOENIX WORLD</b>
+    </a>
+    <span class="hud">AI systems for logistics · Miami, FL · phoenixworld.ai</span>
+    <a class="hud" href="/privacy/">Privacy</a>
+  </div>
+</footer>

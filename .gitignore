@@ -1,0 +1,26 @@
+node_modules/
+dist/
+.astro/
+.env
+.env.*
+!.env.example
+.vercel/
+test-results/
+playwright-report/
+lighthouse/
+.DS_Store
+parity/
+dist-test/
+dist-voice/
+.preview-password
+.dev.vars
+.wrangler/
+
+# Cloudflare API token (local only)
+.cloudflare-token
+
+# Local screenshots
+printscreen/
+
+# Voice recordings live in ~/PhoenixHQ/assets/voice, not in the site repo
+websitevoiceintro/

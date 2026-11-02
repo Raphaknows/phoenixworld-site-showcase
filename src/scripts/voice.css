@@ -1,0 +1,40 @@
+/* Phoenix voice: loaded only with the PUBLIC_PHOENIX_VOICE flag (see voice.ts). */
+.hero .hero-copy{position:relative;z-index:2} /* the hero text and buttons stay above the phoenix click area */
+.phx-voice{position:absolute;inset:0;z-index:1;pointer-events:none}
+
+/* the phoenix itself: a real button over where it is drawn */
+.phx-talk{position:absolute;pointer-events:auto;cursor:pointer;left:56%;right:0;top:80px;bottom:130px;border-radius:12px;-webkit-tap-highlight-color:transparent;transition:background .4s ease}
+.phx-talk:hover,.phx-talk:focus-visible{background:radial-gradient(closest-side,rgba(255,150,50,.17),rgba(255,106,26,.07) 55%,transparent 85%)}
+.phx-talk:focus-visible{outline:2px solid var(--plasma);outline-offset:-6px}
+
+.phx-dock{position:absolute;left:56%;right:0;top:490px;display:flex;flex-direction:column;align-items:center;gap:10px;pointer-events:none}
+.phx-caption{margin:0;max-width:38ch;text-align:center;font-size:15px;line-height:1.5;color:#E6EDF2;background:rgba(6,8,11,.78);border:1px solid var(--seam);padding:10px 14px;text-shadow:0 1px 8px rgba(0,0,0,.9)}
+.phx-caption[hidden]{display:none}
+.phx-row{display:flex;align-items:center;justify-content:center;gap:10px;max-width:100%}
+
+/* readable over the particles: a dark pill with a warm edge, not bare text */
+.phx-label{margin:0;display:inline-flex;align-items:center;gap:12px;padding:9px 16px 9px 14px;min-width:0;text-align:left;
+  font-family:var(--f-mono);font-size:12px;line-height:1.35;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);
+  background:rgba(6,8,11,.8);border:1px solid rgba(255,190,92,.38);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+  text-shadow:0 1px 6px rgba(0,0,0,.9);animation:phx-in .9s ease both;transition:opacity .5s ease,visibility 0s linear 0s}
+.phx-label.off{opacity:0;visibility:hidden;transition:opacity .35s ease,visibility 0s linear .35s}
+.phx-glyph{position:relative;flex:none;display:grid;place-items:center;width:16px;height:16px;color:var(--ember)}
+/* a gentle ring every few seconds */
+.phx-glyph::after{content:"";position:absolute;inset:-7px;border-radius:50%;border:1px solid var(--ember);opacity:0;animation:phx-pulse 3.8s ease-out 1.2s infinite}
+@keyframes phx-pulse{0%{transform:scale(.55);opacity:.8}55%,100%{transform:scale(1.5);opacity:0}}
+@keyframes phx-in{from{opacity:0}to{opacity:1}}
+
+.phx-mute{pointer-events:auto;flex:none;display:grid;place-items:center;width:40px;height:40px;padding:0;color:var(--fg);background:rgba(6,8,11,.7);border:1px solid var(--seam);cursor:pointer}
+.phx-mute:hover{border-color:var(--ember)}
+
+@media (max-width:899px){
+  .phx-talk{left:0;right:0;top:0;bottom:auto;height:min(48vh,360px)}
+  .phx-dock{left:16px;right:16px;top:auto;bottom:calc(100% - min(48vh,360px) + 6px)} /* anchored at the foot of the phoenix area; the caption grows upward */
+  .phx-label{font-size:11px;letter-spacing:.1em;padding:8px 12px 8px 10px;gap:10px}
+  .phx-mute{width:44px;height:44px}
+}
+@media (prefers-reduced-motion:reduce){
+  .phx-glyph::after{animation:none}
+  .phx-label,.phx-label.off{animation:none;transition:none}
+  .phx-talk{transition:none}
+}

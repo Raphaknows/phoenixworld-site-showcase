@@ -1,0 +1,34 @@
+---
+import Base from '../layouts/Base.astro';
+import Stage from '../components/Stage.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import ChAshes from '../components/ChAshes.astro';
+import ChRebirth from '../components/ChRebirth.astro';
+import ChIgnition from '../components/ChIgnition.astro';
+import ChShield from '../components/ChShield.astro';
+import ChProof from '../components/ChProof.astro';
+import ChAudit from '../components/ChAudit.astro';
+import Footer from '../components/Footer.astro';
+---
+<Base
+  title="Phoenix World | AI systems for freight forwarders, customs brokers & 3PLs"
+  description="Custom AI for freight forwarders, customs brokers and 3PLs: reads shipping documents, enters the data, answers routine emails. Free 20-minute workflow audit."
+>
+  <Stage />
+  <Header home />
+  <main>
+    <Hero />
+    <ChAshes />
+    <ChRebirth />
+    <ChIgnition />
+    <ChShield />
+    <ChProof />
+    <ChAudit />
+  </main>
+  <Footer home />
+</Base>
+
+<script>
+  import '../scripts/main.ts';
+</script>
